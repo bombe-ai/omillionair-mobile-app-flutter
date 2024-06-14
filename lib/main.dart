@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:omillionare/Screens/splash_screen.dart';
 import 'package:omillionare/shared/theme/app_theme.dart';
 import 'package:omillionare/Screens/home_page.dart';
 import 'package:omillionare/Screens/login_page.dart';
@@ -21,14 +22,19 @@ class MyApp extends StatelessWidget {
         '/': (context) => SafeArea(
               top: true,
               bottom: true,
+              child: SplashScreen(),
+            ),
+        '/home': (context) => SafeArea(
+              top: true,
+              bottom: true,
               child: HomePage(),
             ),
-        '/page1': (context) => SafeArea(
+        '/login': (context) => SafeArea(
               top: true,
               bottom: true,
               child: LoginPage(),
             ),
-        '/page2': (context) => SafeArea(
+        '/signup': (context) => SafeArea(
               top: true,
               bottom: true,
               child: SignupPage(),

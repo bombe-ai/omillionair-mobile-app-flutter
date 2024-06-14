@@ -11,21 +11,21 @@ class DrawerWidget extends StatelessWidget {
           title: Text('Home'),
           onTap: () {
             Navigator.pop(context);
-            Navigator.pushNamed(context, '/');
+            Navigator.pushNamed(context, '/home');
           },
         ),
         ListTile(
           title: Text('Login'),
           onTap: () {
             Navigator.pop(context);
-            Navigator.pushNamed(context, '/page1');
+            Navigator.pushNamed(context, '/login');
           },
         ),
         ListTile(
           title: Text('Signup'),
           onTap: () {
             Navigator.pop(context);
-            Navigator.pushNamed(context, '/page2');
+            Navigator.pushNamed(context, '/signup');
           },
         ),
       ],

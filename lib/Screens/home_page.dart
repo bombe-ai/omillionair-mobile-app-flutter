@@ -17,14 +17,14 @@ class HomePage extends StatelessWidget {
             children: [
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/page1');
+                  Navigator.pushNamed(context, '/login');
                 },
                 child: Text('Login'),
               ),
               const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, '/page2');
+                  Navigator.pushNamed(context, '/signup');
                 },
                 child: Text('Sign up'),
               ),

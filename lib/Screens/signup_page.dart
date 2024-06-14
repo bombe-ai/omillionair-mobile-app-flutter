@@ -15,7 +15,7 @@ class SignupPage extends StatelessWidget {
       body: Center(
         child: ElevatedButton(
           onPressed: () {
-            Navigator.pushNamed(context, '/page1');
+            Navigator.pushNamed(context, '/login');
           },
           child: Text('Go to Login Page'),
         ),
