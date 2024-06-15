@@ -14,6 +14,9 @@ class AppTheme {
     );
   }
 
+// #01B513
+// #017E32
+
   static ColorScheme get _colorScheme {
     return const ColorScheme(
       brightness: Brightness.light,
