@@ -360,7 +360,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.0"
-<<<<<<< HEAD
   glob:
     dependency: transitive
     description:
@@ -369,23 +368,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.1.2"
-=======
->>>>>>> 185924bad9c5a8a774210facf4fb0d71b7de6816
   go_router:
     dependency: "direct main"
     description:
       name: go_router
-<<<<<<< HEAD
       sha256: cdae1b9c8bd7efadcef6112e81c903662ef2ce105cbd220a04bbb7c3425b5554
       url: "https://pub.dev"
     source: hosted
     version: "14.2.0"
-=======
-      sha256: edbceb4c06758652fc9d12e58edb371cd977011b032e298dae0eb357167baad2
-      url: "https://pub.dev"
-    source: hosted
-    version: "9.1.1"
->>>>>>> 185924bad9c5a8a774210facf4fb0d71b7de6816
   google_fonts:
     dependency: "direct main"
     description:
@@ -530,7 +520,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.2.0"
-<<<<<<< HEAD
   lottie:
     dependency: "direct main"
     description:
@@ -539,8 +528,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.1.2"
-=======
->>>>>>> 185924bad9c5a8a774210facf4fb0d71b7de6816
   matcher:
     dependency: transitive
     description:
@@ -609,10 +596,10 @@ packages:
     dependency: transitive
     description:
       name: path_provider_android
-      sha256: a248d8146ee5983446bf03ed5ea8f6533129a12b11f12057ad1b4a67a2b3b41d
+      sha256: bca87b0165ffd7cdb9cad8edd22d18d2201e886d9a9f19b4fb3452ea7df3a72a
       url: "https://pub.dev"
     source: hosted
-    version: "2.2.4"
+    version: "2.2.6"
   path_provider_foundation:
     dependency: transitive
     description:
@@ -886,10 +873,10 @@ packages:
     dependency: transitive
     description:
       name: url_launcher_android
-      sha256: "17cd5e205ea615e2c6ea7a77323a11712dffa0720a8a90540db57a01347f9ad9"
+      sha256: ceb2625f0c24ade6ef6778d1de0b2e44f2db71fded235eb52295247feba8c5cf
       url: "https://pub.dev"
     source: hosted
-    version: "6.3.2"
+    version: "6.3.3"
   url_launcher_ios:
     dependency: transitive
     description:
@@ -1014,10 +1001,10 @@ packages:
     dependency: transitive
     description:
       name: win32
-      sha256: "0eaf06e3446824099858367950a813472af675116bf63f008a4c2a75ae13e9cb"
+      sha256: a79dbe579cb51ecd6d30b17e0cae4e0ea15e2c0e66f69ad4198f22a6789e94f4
       url: "https://pub.dev"
     source: hosted
-    version: "5.5.0"
+    version: "5.5.1"
   xdg_directories:
     dependency: transitive
     description:
