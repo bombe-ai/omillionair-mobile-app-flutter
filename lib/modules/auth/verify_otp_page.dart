@@ -3,8 +3,10 @@ import 'dart:developer';
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lottie/lottie.dart';
+import 'package:omillionare/appState/app_start_provider.dart';
 import 'package:omillionare/constants/app_color.dart';
 import 'package:omillionare/gen/assets.gen.dart';
 import 'package:omillionare/helper/device_info.dart';
@@ -12,16 +14,16 @@ import 'package:omillionare/modules/auth/verify_success.dart';
 import 'package:omillionare/widgets/buttons/primary_button.dart';
 import 'package:omillionare/widgets/textFields/text_field_widget.dart';
 
-class OtpPage extends StatefulWidget {
+class OtpPage extends ConsumerStatefulWidget {
   static const String routeName = 'auth/signup/otp';
 
   const OtpPage({super.key});
 
   @override
-  State<OtpPage> createState() => _OtpPageState();
+  ConsumerState<OtpPage> createState() => _OtpPageState();
 }
 
-class _OtpPageState extends State<OtpPage> {
+class _OtpPageState extends ConsumerState<OtpPage> {
   TextEditingController otpController = TextEditingController();
 
   final _formKey = GlobalKey<FormState>();
@@ -248,9 +250,9 @@ class _OtpPageState extends State<OtpPage> {
 
   void onSubmit() {
     if (_formKey.currentState!.validate() && (otpController.text.length > 3)) {
-
       context.pushReplacementNamed(OtpVerifiedPage.routeName);
-      setState(() {});
+      ref.read(appStartProvider.notifier).setVerified();
+
     }
   }
 }

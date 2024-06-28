@@ -36,6 +36,7 @@ class RoundedButton extends StatelessWidget {
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(borderRadius ?? 10),
           color: btnColor ?? const Color(0xffF9FAFB),
+          border: Border.all(color: borderColor ?? Colors.transparent),
           boxShadow: enableBoxShadow!
               ? [
                   BoxShadow(

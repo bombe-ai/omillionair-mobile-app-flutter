@@ -17,7 +17,7 @@ final routerProvider = Provider.autoDispose<GoRouter>((ref) {
     navigatorKey: _key,
     refreshListenable: notifier,
     debugLogDiagnostics: true,
-    // initialLocation: "/${SplashScreen.routeName}",
+    initialLocation: "/${SplashScreen.routeName}",
     routes: notifier.routes,
     errorBuilder: (context, state) {
       return ErrorPage(

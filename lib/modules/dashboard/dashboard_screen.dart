@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:go_router/go_router.dart';
+import 'package:omillionare/appState/app_start_state.dart';
 import 'package:omillionare/constants/app_color.dart';
 import 'package:omillionare/gen/assets.gen.dart';
+import 'package:omillionare/modules/auth/login_page.dart';
 import 'package:omillionare/modules/dashboard/controller/dashboard_controller.dart';
 import 'package:omillionare/modules/home/controller/home_controller.dart';
+import 'package:omillionare/route/router_notifier.dart';
 import 'package:omillionare/widgets/drawer/drawer.dart';
 
 final GlobalKey<ScaffoldState> scaffoldKey = GlobalKey<ScaffoldState>();
@@ -50,9 +54,11 @@ class DashboardScreenState extends ConsumerState<DashboardScreen>
       _animationController.reverse();
     }
     _isMenuOpen = !_isMenuOpen;
-    scaffoldKey.currentState?.openEndDrawer();
-
-    // context.pushNamed(LoginPage.routeName);
+    if (appStatus == AppStatus.VERIFIED) {
+      scaffoldKey.currentState?.openEndDrawer();
+    } else {
+      context.pushNamed(LoginPage.routeName);
+    }
   }
 
   @override
@@ -73,45 +79,46 @@ class DashboardScreenState extends ConsumerState<DashboardScreen>
         primary: true,
         toolbarHeight: 70,
         actions: [
-          SizedBox(
-            width: 37,
-            height: 37,
-            child: Stack(
-              clipBehavior: Clip.none,
-              children: [
-                Align(
-                  alignment: Alignment.center,
-                  child: Icon(
-                    Icons.notifications_none_outlined,
-                    size: 36,
-                    color: AppColor.kPrimary,
-                  ),
-                ),
-                Positioned(
-                  top: 0,
-                  right: -2,
-                  child: Container(
-                    width: 20,
-                    height: 20,
-                    decoration: BoxDecoration(
-                      color: AppColor.yellow,
-                      shape: BoxShape.circle,
+          if (appStatus == AppStatus.VERIFIED)
+            SizedBox(
+              width: 37,
+              height: 37,
+              child: Stack(
+                clipBehavior: Clip.none,
+                children: [
+                  Align(
+                    alignment: Alignment.center,
+                    child: Icon(
+                      Icons.notifications_none_outlined,
+                      size: 36,
+                      color: AppColor.kPrimary,
                     ),
-                    child: Center(
-                      child: Text(
-                        "69",
-                        style: TextStyle(
-                          fontSize: 10,
-                          fontWeight: FontWeight.w600,
-                          color: AppColor.black,
+                  ),
+                  Positioned(
+                    top: 0,
+                    right: -2,
+                    child: Container(
+                      width: 20,
+                      height: 20,
+                      decoration: BoxDecoration(
+                        color: AppColor.yellow,
+                        shape: BoxShape.circle,
+                      ),
+                      child: Center(
+                        child: Text(
+                          "69",
+                          style: TextStyle(
+                            fontSize: 10,
+                            fontWeight: FontWeight.w600,
+                            color: AppColor.black,
+                          ),
                         ),
                       ),
                     ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
-          ),
           const SizedBox(
             width: 10,
           ),

@@ -3,7 +3,7 @@
 import 'package:flutter/material.dart';
 
 class ErrorPage extends StatelessWidget {
-  final String routeName = 'error';
+  static const String routeName = 'error';
   final String message;
 
   const ErrorPage({super.key, required this.message});

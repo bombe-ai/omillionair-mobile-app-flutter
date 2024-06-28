@@ -146,12 +146,81 @@ class $AssetsStaticsGen {
 class $AssetsSvgGen {
   const $AssetsSvgGen();
 
+  /// Directory path: assets/svg/drawerIcons
+  $AssetsSvgDrawerIconsGen get drawerIcons => const $AssetsSvgDrawerIconsGen();
+
   /// File path: assets/svg/transparent _logo.svg
   SvgGenImage get transparentLogo =>
       const SvgGenImage('assets/svg/transparent _logo.svg');
 
   /// List of all assets
   List<SvgGenImage> get values => [transparentLogo];
+}
+
+class $AssetsSvgDrawerIconsGen {
+  const $AssetsSvgDrawerIconsGen();
+
+  /// File path: assets/svg/drawerIcons/about_us.svg
+  SvgGenImage get aboutUs =>
+      const SvgGenImage('assets/svg/drawerIcons/about_us.svg');
+
+  /// File path: assets/svg/drawerIcons/live.svg
+  SvgGenImage get live => const SvgGenImage('assets/svg/drawerIcons/live.svg');
+
+  /// File path: assets/svg/drawerIcons/logot.svg
+  SvgGenImage get logot =>
+      const SvgGenImage('assets/svg/drawerIcons/logot.svg');
+
+  /// File path: assets/svg/drawerIcons/notification.svg
+  SvgGenImage get notification =>
+      const SvgGenImage('assets/svg/drawerIcons/notification.svg');
+
+  /// File path: assets/svg/drawerIcons/number123.svg
+  SvgGenImage get number123 =>
+      const SvgGenImage('assets/svg/drawerIcons/number123.svg');
+
+  /// File path: assets/svg/drawerIcons/pricebreak.svg
+  SvgGenImage get pricebreak =>
+      const SvgGenImage('assets/svg/drawerIcons/pricebreak.svg');
+
+  /// File path: assets/svg/drawerIcons/prize.svg
+  SvgGenImage get prize =>
+      const SvgGenImage('assets/svg/drawerIcons/prize.svg');
+
+  /// File path: assets/svg/drawerIcons/profile.svg
+  SvgGenImage get profile =>
+      const SvgGenImage('assets/svg/drawerIcons/profile.svg');
+
+  /// File path: assets/svg/drawerIcons/support.svg
+  SvgGenImage get support =>
+      const SvgGenImage('assets/svg/drawerIcons/support.svg');
+
+  /// File path: assets/svg/drawerIcons/term.svg
+  SvgGenImage get term => const SvgGenImage('assets/svg/drawerIcons/term.svg');
+
+  /// File path: assets/svg/drawerIcons/transaction.svg
+  SvgGenImage get transaction =>
+      const SvgGenImage('assets/svg/drawerIcons/transaction.svg');
+
+  /// File path: assets/svg/drawerIcons/wallet.svg
+  SvgGenImage get wallet =>
+      const SvgGenImage('assets/svg/drawerIcons/wallet.svg');
+
+  /// List of all assets
+  List<SvgGenImage> get values => [
+        aboutUs,
+        live,
+        logot,
+        notification,
+        number123,
+        pricebreak,
+        prize,
+        profile,
+        support,
+        term,
+        transaction,
+        wallet
+      ];
 }
 
 class Assets {

@@ -1,7 +1,9 @@
 import 'dart:developer';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
+import 'package:omillionare/appState/app_start_provider.dart';
 import 'package:omillionare/constants/app_color.dart';
 import 'package:omillionare/constants/app_constants.dart';
 import 'package:omillionare/gen/assets.gen.dart';
@@ -12,16 +14,16 @@ import 'package:omillionare/widgets/buttons/primary_button.dart';
 import 'package:omillionare/widgets/common/country_dropdown.dart';
 import 'package:omillionare/widgets/textFields/text_field_widget.dart';
 
-class LoginPage extends StatefulWidget {
+class LoginPage extends ConsumerStatefulWidget {
   static const String routeName = 'auth/login';
 
   const LoginPage({super.key});
 
   @override
-  State<LoginPage> createState() => _LoginPageState();
+  ConsumerState<LoginPage> createState() => _LoginPageState();
 }
 
-class _LoginPageState extends State<LoginPage> {
+class _LoginPageState extends ConsumerState<LoginPage> {
   TextEditingController passwordController = TextEditingController();
   TextEditingController phoneController = TextEditingController();
   final _formKey = GlobalKey<FormState>();
@@ -233,6 +235,7 @@ class _LoginPageState extends State<LoginPage> {
   void onSubmit() {
     if (_formKey.currentState!.validate()) {
       setState(() {});
+      ref.read(appStartProvider.notifier).setVerified();
       context.pushReplacementNamed(HomeScreen.routeName);
       sharedPrefs!.setBool("isLogin", true);
     }
